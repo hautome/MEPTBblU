@@ -20,30 +20,16 @@
     <!-- Preload fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fredoka+One&family=Comic+Neue:wght@300;400;700&family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fredoka+One&family=Comic+Neue:wght@300;400;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=4">
+    <link rel="stylesheet" href="styles.css?v=7">
 </head>
-<body data-theme="white-green">
-    <!-- Экран загрузки -->
-    <div id="loading-screen" class="loading-screen">
-        <div class="loading-content">
-            <div class="loading-logo">
-                <i class="fas fa-user-secret"></i>
-            </div>
-            <div class="loading-text">
-                <span class="loading-name">notso6er</span>
-                <div class="loading-bar">
-                    <div class="loading-progress"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Фон с изображением -->
+<body data-theme="winter">
+    <!-- Фоновое изображение -->
     <div class="background-image"></div>
     <!-- Основной контент -->
-    <div class="container" id="main-content" style="opacity: 0;">
+    <div class="container" id="main-content">
         <header class="profile-header">
             <div class="profile-avatar">
                 <div class="avatar-border">
@@ -79,6 +65,7 @@
                 </div>
             </div>
         </header>
+        
         <section class="social-links">
             <h2 class="section-title">
                 <i class="fas fa-link"></i>
@@ -213,15 +200,14 @@
         © <span id="current-year"></span> notso6er. Все права защищены.
     </div>
     <!-- Скрипты -->
-    <script src="animations.js?v=4"></script>
+    <script src="animations.js?v=7"></script>
     <script>
         // Установка текущего года в копирайт
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
-        // Функция для увеличения и отображения счетчика просмотров (исправленная)
+        // Функция для увеличения и отображения счетчика просмотров
         async function updateViewCount() {
             try {
-                // Используем уникальный ключ для вашего сайта
                 const response = await fetch('https://api.countapi.xyz/hit/notso6er-github-io/visits');
                 if (response.ok) {
                     const data = await response.json();

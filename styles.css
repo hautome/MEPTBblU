@@ -105,17 +105,20 @@ body {
 .container {
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 30px;
     position: relative;
     z-index: 10;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    background: var(--glass-bg);
-    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 25px;
     margin-top: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(20px);
-    border: 1px solid var(--glass-border);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        0 0 0 1px rgba(255, 255, 255, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(135, 206, 235, 0.3);
     animation: fadeInUp 1s ease-out;
 }
 
@@ -135,14 +138,17 @@ body {
 }
 
 .avatar-border {
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
-    padding: 4px;
-    background: var(--mountain-gradient);
+    padding: 5px;
+    background: linear-gradient(45deg, #87CEEB, #4682B4, #5F9EA0, #B0E0E6, #87CEEB);
     background-size: 400% 400%;
     animation: rotate 4s linear infinite, gradientShift 3s ease-in-out infinite;
-    box-shadow: 0 0 30px var(--neon-glow), 0 0 60px rgba(135, 206, 235, 0.4);
+    box-shadow: 
+        0 0 30px rgba(135, 206, 235, 0.8),
+        0 0 60px rgba(135, 206, 235, 0.4),
+        0 0 90px rgba(135, 206, 235, 0.2);
     position: relative;
 }
 
@@ -165,14 +171,16 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--ice-color), rgba(255, 255, 255, 0.9));
+    background: linear-gradient(135deg, #E0F6FF, #ffffff, #F0F8FF);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
-    color: var(--primary-color);
-    transition: transform 0.3s ease;
-    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.7);
+    font-size: 3.5rem;
+    color: #4682B4;
+    transition: all 0.3s ease;
+    box-shadow: 
+        inset 0 0 30px rgba(255, 255, 255, 0.8),
+        inset 0 0 60px rgba(135, 206, 235, 0.1);
 }
 
 .avatar-inner:hover {
@@ -181,24 +189,35 @@ body {
 
 .profile-name {
     font-family: 'Orbitron', sans-serif;
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    letter-spacing: 2px;
-    color: var(--text-color);
-    text-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    color: #2c3e50;
+    text-shadow: 
+        0 0 10px rgba(135, 206, 235, 0.5),
+        0 0 20px rgba(135, 206, 235, 0.3),
+        0 0 30px rgba(135, 206, 235, 0.1);
 }
 
 .blood-text {
     display: inline-block;
-    color: var(--blood-text-color);
+    color: #4682B4;
     animation: bloodDrop 3s infinite;
-    text-shadow: 0 0 5px rgba(135, 206, 235, 0.6);
+    text-shadow: 
+        0 0 5px rgba(135, 206, 235, 0.8),
+        0 0 10px rgba(135, 206, 235, 0.4);
     transition: all 0.3s ease;
+    font-weight: 800;
 }
 
 .blood-text:hover {
-    transform: scale(1.2);
-    text-shadow: 0 0 15px rgba(135, 206, 235, 0.9);
+    transform: scale(1.3) rotate(5deg);
+    text-shadow: 
+        0 0 15px rgba(135, 206, 235, 1),
+        0 0 25px rgba(135, 206, 235, 0.6),
+        0 0 35px rgba(135, 206, 235, 0.3);
+    color: #87CEEB;
 }
 
 .blood-text:nth-child(2) { animation-delay: 0.2s; }
@@ -219,23 +238,28 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    font-size: 1rem;
-    color: var(--text-color);
-    padding: 8px 16px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 25px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(135, 206, 235, 0.3);
+    gap: 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #2c3e50;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(135, 206, 235, 0.4);
     transition: all 0.3s ease;
-    box-shadow: 0 2px 10px rgba(135, 206, 235, 0.1);
+    box-shadow: 
+        0 4px 15px rgba(135, 206, 235, 0.2),
+        0 0 0 1px rgba(255, 255, 255, 0.1);
 }
 
 .detail-item:hover {
-    background: rgba(255, 255, 255, 0.3);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(135, 206, 235, 0.2);
-    border-color: rgba(135, 206, 235, 0.5);
+    background: rgba(255, 255, 255, 0.5);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 
+        0 8px 25px rgba(135, 206, 235, 0.3),
+        0 0 0 1px rgba(135, 206, 235, 0.6);
+    border-color: rgba(135, 206, 235, 0.7);
 }
 
 /* Секция ссылок */
@@ -245,13 +269,16 @@ body {
 
 .section-title {
     font-family: 'Fredoka One', cursive;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #4682B4;
     display: flex;
     align-items: center;
-    gap: 10px;
-    text-shadow: 0 0 10px rgba(135, 206, 235, 0.4);
+    gap: 12px;
+    text-shadow: 
+        0 0 10px rgba(135, 206, 235, 0.6),
+        0 0 20px rgba(135, 206, 235, 0.3);
+    font-weight: 600;
 }
 
 /* Интерактивный заголовок друзей */
@@ -318,17 +345,19 @@ body {
 .social-link {
     display: flex;
     align-items: center;
-    padding: 15px;
-    background: var(--glass-bg);
-    border-radius: 15px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
     text-decoration: none;
-    color: var(--text-color);
+    color: #2c3e50;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid var(--glass-border);
-    box-shadow: 0 4px 6px var(--shadow-color);
+    border: 1px solid rgba(135, 206, 235, 0.3);
+    box-shadow: 
+        0 4px 15px rgba(0, 0, 0, 0.1),
+        0 0 0 1px rgba(255, 255, 255, 0.1);
     position: relative;
     overflow: hidden;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
 }
 
 .social-link::before {

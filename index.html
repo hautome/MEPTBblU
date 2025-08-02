@@ -20,17 +20,16 @@
     <!-- Preload fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fredoka+One&family=Comic+Neue:wght@300;400;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fredoka+One&family=Comic+Neue:wght@300;400;700&family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=1">
+    <link rel="stylesheet" href="styles.css?v=3">
 </head>
-<body data-theme="blue"> <!-- Меняем тему на синюю, можете изменить на другую -->
+<body data-theme="blue">
     <!-- Экран загрузки -->
     <div id="loading-screen" class="loading-screen">
         <div class="loading-content">
             <div class="loading-logo">
-                <!-- Меняем иконку загрузки -->
                 <i class="fas fa-user-secret"></i>
             </div>
             <div class="loading-text">
@@ -61,14 +60,12 @@
             <div class="profile-avatar">
                 <div class="avatar-border">
                     <div class="avatar-inner">
-                        <!-- Меняем иконку аватара -->
                         <i class="fas fa-user-secret"></i>
                     </div>
                 </div>
             </div>
             <div class="profile-info">
                 <h1 class="profile-name">
-                    <!-- Меняем имя -->
                     <span class="blood-text">n</span>
                     <span class="blood-text">o</span>
                     <span class="blood-text">t</span>
@@ -81,11 +78,9 @@
                 <div class="profile-details">
                     <div class="detail-item">
                         <i class="fas fa-birthday-cake"></i>
-                        <!-- Меняем возраст -->
                         <span>15 лет</span>
                     </div>
                     <div class="detail-item">
-                        <!-- Меняем иконку и текст -->
                         <i class="fas fa-laptop-code"></i>
                         <span>Developer</span>
                     </div>
@@ -114,23 +109,84 @@
                         <i class="fas fa-external-link-alt"></i>
                     </div>
                 </a>
-                <!-- Добавьте больше ссылок по желанию -->
             </div>
         </section>
+        
+        <!-- Интерактивная секция друзей -->
         <section class="social-links">
-            <h2 class="section-title">
+            <h2 class="section-title friends-toggle" id="friends-toggle">
                 <i class="fas fa-users"></i>
                 Мои друзья
+                <i class="fas fa-chevron-down toggle-icon" id="toggle-icon"></i>
             </h2>
-            <div class="links-container">
-                <!-- Добавьте ссылки на друзей по желанию -->
-                <a href="#" class="social-link bro-link" target="_blank" rel="noopener noreferrer">
+            <div class="links-container friends-list" id="friends-list" style="display: none;">
+                <a href="https://t.me/ubuntu32" class="social-link bro-link" target="_blank" rel="noopener noreferrer">
                     <div class="link-icon">
                         <i class="fas fa-user-friends"></i>
                     </div>
                     <div class="link-info">
-                        <span class="link-title">Друг</span>
-                        <span class="link-handle">@friend1</span>
+                        <span class="link-title">Aeza</span>
+                        <span class="link-handle">@ubuntu32</span>
+                    </div>
+                    <div class="link-arrow">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+                <a href="https://t.me/6011428748" class="social-link bro-link" target="_blank" rel="noopener noreferrer">
+                    <div class="link-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <div class="link-info">
+                        <span class="link-title">nyashka</span>
+                        <span class="link-handle">@6011428748</span>
+                    </div>
+                    <div class="link-arrow">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+                <a href="https://t.me/sterepando" class="social-link bro-link" target="_blank" rel="noopener noreferrer">
+                    <div class="link-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <div class="link-info">
+                        <span class="link-title">sterepando</span>
+                        <span class="link-handle">@sterepando</span>
+                    </div>
+                    <div class="link-arrow">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+                <a href="https://t.me/faraonchiklol" class="social-link bro-link" target="_blank" rel="noopener noreferrer">
+                    <div class="link-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <div class="link-info">
+                        <span class="link-title">okak</span>
+                        <span class="link-handle">@faraonchiklol</span>
+                    </div>
+                    <div class="link-arrow">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+                <a href="https://t.me/Uzuy_tengen" class="social-link bro-link" target="_blank" rel="noopener noreferrer">
+                    <div class="link-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <div class="link-info">
+                        <span class="link-title">тенген</span>
+                        <span class="link-handle">@Uzuy_tengen</span>
+                    </div>
+                    <div class="link-arrow">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+                <a href="https://t.me/Codeatack" class="social-link bro-link" target="_blank" rel="noopener noreferrer">
+                    <div class="link-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <div class="link-info">
+                        <span class="link-title">Codeatack</span>
+                        <span class="link-handle">@Codeatack</span>
                     </div>
                     <div class="link-arrow">
                         <i class="fas fa-external-link-alt"></i>
@@ -138,6 +194,7 @@
                 </a>
             </div>
         </section>
+        
         <section class="bio-section">
             <h2 class="section-title">
                 <i class="fas fa-user"></i>
@@ -146,8 +203,9 @@
             <div class="bio-content">
                 <div class="bio-card">
                     <div class="bio-text">
-                        <p>Привет! Это моя официальная страница! 🖤</p>
-                        <p>Здесь ты найдешь все актуальные ссылки обо мне.</p>
+                        <p>👋 Привет! Я <strong>notso6er</strong>, мне 15 лет и я увлекаюсь программированием.</p>
+                        <p>💻 Я создаю интересные проекты на <strong>Python</strong> и <strong>JavaScript</strong>.</p>
+                        <p>🌟 Здесь ты найдешь все актуальные ссылки обо мне и моих друзьях.</p>
                         <p class="warning-text">
                             <i class="fas fa-exclamation-triangle"></i>
                             Остерегайтесь подделок!
@@ -159,7 +217,7 @@
         <!-- Счетчик просмотров -->
         <section class="views-section">
             <div class="views-content">
-                <p>Просмотров: <span id="view-count">Загрузка...</span></p>
+                <p><i class="fas fa-eye"></i> Просмотров: <span id="view-count">Загрузка...</span></p>
             </div>
         </section>
     </div>
@@ -168,16 +226,16 @@
         © <span id="current-year"></span> notso6er. Все права защищены.
     </div>
     <!-- Скрипты -->
-    <script src="animations.js?v=1"></script>
+    <script src="animations.js?v=3"></script>
     <script>
         // Установка текущего года в копирайт
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
-        // Функция для увеличения и отображения счетчика просмотров
+        // Функция для увеличения и отображения счетчика просмотров (исправленная)
         async function updateViewCount() {
             try {
-                // Замените 'your-username' на ваше имя пользователя GitHub
-                const response = await fetch('https://api.countapi.xyz/hit/notso6er.github.io/views');
+                // Используем уникальный ключ для вашего сайта
+                const response = await fetch('https://api.countapi.xyz/hit/notso6er-github-io/visits');
                 if (response.ok) {
                     const data = await response.json();
                     document.getElementById('view-count').textContent = data.value;
@@ -193,6 +251,25 @@
 
         // Вызываем функцию после загрузки страницы
         window.addEventListener('load', updateViewCount);
+
+        // Интерактивность для списка друзей
+        document.addEventListener('DOMContentLoaded', function() {
+            const friendsToggle = document.getElementById('friends-toggle');
+            const friendsList = document.getElementById('friends-list');
+            const toggleIcon = document.getElementById('toggle-icon');
+
+            friendsToggle.addEventListener('click', function() {
+                if (friendsList.style.display === 'none' || friendsList.style.display === '') {
+                    friendsList.style.display = 'flex';
+                    toggleIcon.classList.remove('fa-chevron-down');
+                    toggleIcon.classList.add('fa-chevron-up');
+                } else {
+                    friendsList.style.display = 'none';
+                    toggleIcon.classList.remove('fa-chevron-up');
+                    toggleIcon.classList.add('fa-chevron-down');
+                }
+            });
+        });
     </script>
 </body>
 </html>

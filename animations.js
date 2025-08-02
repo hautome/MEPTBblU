@@ -3,19 +3,18 @@
 // Функция для создания снежинок
 function createSnowflakes() {
     const snowflakesContainer = document.getElementById('snowflakes');
-    const snowflakeCount = 50; // Количество снежинок
+    const snowflakeCount = 50;
 
     for (let i = 0; i < snowflakeCount; i++) {
         const snowflake = document.createElement('div');
         snowflake.classList.add('snowflake');
-        snowflake.innerHTML = '❄'; // Или используйте другие символы
+        snowflake.innerHTML = '❄';
         snowflakesContainer.appendChild(snowflake);
 
-        // Случайные стили для каждой снежинки
-        const size = Math.random() * 1 + 0.5; // Размер от 0.5 до 1.5em
-        const startPositionX = Math.random() * 100; // Начальная позиция по X от 0 до 100%
-        const delay = Math.random() * 5; // Задержка анимации от 0 до 5s
-        const duration = Math.random() * 3 + 5; // Продолжительность от 5 до 8s
+        const size = Math.random() * 1 + 0.5;
+        const startPositionX = Math.random() * 100;
+        const delay = Math.random() * 5;
+        const duration = Math.random() * 3 + 5;
 
         snowflake.style.left = `${startPositionX}vw`;
         snowflake.style.fontSize = `${size}em`;
@@ -50,7 +49,6 @@ function simulateLoading() {
         if (progress >= 100) {
             progress = 100;
             clearInterval(interval);
-            // Скрываем экран загрузки и показываем контент
             setTimeout(() => {
                 loadingScreen.style.opacity = '0';
                 loadingScreen.style.visibility = 'hidden';

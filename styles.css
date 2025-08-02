@@ -12,6 +12,7 @@
     --warning-color: #e74c3c;
     --loading-bar-color: #3498db;
     --blood-text-color: #3498db;
+    --success-color: #2ecc71;
 }
 
 /* Темы */
@@ -50,7 +51,7 @@ body[data-theme="orange"] {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', 'Inter', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
@@ -274,10 +275,45 @@ body {
     gap: 10px;
 }
 
+/* Интерактивный заголовок друзей */
+.friends-toggle {
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.3s ease;
+}
+
+.friends-toggle:hover {
+    color: var(--secondary-color);
+}
+
+.toggle-icon {
+    margin-left: auto;
+    transition: transform 0.3s ease;
+}
+
 .links-container {
     display: flex;
     flex-direction: column;
     gap: 15px;
+}
+
+/* Анимация списка друзей */
+.friends-list {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    animation: slideDown 0.3s ease forwards;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .social-link {
@@ -356,6 +392,10 @@ body {
     margin-bottom: 15px;
 }
 
+.bio-text strong {
+    color: var(--primary-color);
+}
+
 .warning-text {
     color: var(--warning-color);
     font-weight: 600;
@@ -382,6 +422,10 @@ body {
 .views-content p {
     margin: 0;
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
 /* Копирайт */

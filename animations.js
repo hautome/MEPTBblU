@@ -1,249 +1,43 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
-    <meta name="description" content="notso6er - 15 лет. Официальная био-страница.">
-    <meta name="author" content="notso6er">
-    <meta http-equiv="X-Frame-Options" content="DENY">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta name="referrer" content="no-referrer">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    <title>notso6er - Bio</title>
-    <!-- Защита от ботов -->
-    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
-    <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
-    <meta name="slurp" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
-    <!-- Preload fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fredoka+One&family=Comic+Neue:wght@300;400;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=5">
-</head>
-<body data-theme="winter">
-    <!-- Фоновое изображение -->
-    <div class="background-image"></div>
-    <!-- Основной контент -->
-    <div class="container" id="main-content">
-        <header class="profile-header">
-            <div class="profile-avatar">
-                <div class="avatar-border">
-                    <div class="avatar-inner">
-                        <i class="fas fa-user-secret"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="profile-info">
-                <h1 class="profile-name">
-                    <span class="blood-text">n</span>
-                    <span class="blood-text">o</span>
-                    <span class="blood-text">t</span>
-                    <span class="blood-text">s</span>
-                    <span class="blood-text">o</span>
-                    <span class="blood-text">6</span>
-                    <span class="blood-text">e</span>
-                    <span class="blood-text">r</span>
-                </h1>
-                <div class="profile-details">
-                    <div class="detail-item">
-                        <i class="fas fa-birthday-cake"></i>
-                        <span>15 лет</span>
-                    </div>
-                    <div class="detail-item">
-                        <i class="fas fa-laptop-code"></i>
-                        <span>Developer</span>
-                    </div>
-                    <div class="detail-item">
-                        <i class="fas fa-code"></i>
-                        <span>Python • JavaScript</span>
-                    </div>
-                </div>
-            </div>
-        </header>
-        
-        <section class="social-links">
-            <h2 class="section-title">
-                <i class="fas fa-link"></i>
-                Мои ссылки
-            </h2>
-            <div class="links-container">
-                <a href="https://t.me/notso6er" class="social-link" target="_blank" rel="noopener noreferrer">
-                    <div class="link-icon">
-                        <i class="fab fa-telegram"></i>
-                    </div>
-                    <div class="link-info">
-                        <span class="link-title">Telegram</span>
-                        <span class="link-handle">@notso6er</span>
-                    </div>
-                    <div class="link-arrow">
-                        <i class="fas fa-external-link-alt"></i>
-                    </div>
-                </a>
-            </div>
-        </section>
-        
-        <!-- Интерактивная секция друзей -->
-        <section class="social-links">
-            <h2 class="section-title friends-toggle" id="friends-toggle">
-                <i class="fas fa-users"></i>
-                Мои друзья
-                <i class="fas fa-chevron-down toggle-icon" id="toggle-icon"></i>
-            </h2>
-            <div class="links-container friends-list" id="friends-list" style="display: none;">
-                <a href="https://t.me/ubuntu32" class="social-link bro-link" target="_blank" rel="noopener noreferrer">
-                    <div class="link-icon">
-                        <i class="fas fa-user-friends"></i>
-                    </div>
-                    <div class="link-info">
-                        <span class="link-title">Aeza</span>
-                        <span class="link-handle">@ubuntu32</span>
-                    </div>
-                    <div class="link-arrow">
-                        <i class="fas fa-external-link-alt"></i>
-                    </div>
-                </a>
-                <a href="https://t.me/6011428748" class="social-link bro-link" target="_blank" rel="noopener noreferrer">
-                    <div class="link-icon">
-                        <i class="fas fa-user-friends"></i>
-                    </div>
-                    <div class="link-info">
-                        <span class="link-title">nyashka</span>
-                        <span class="link-handle">@6011428748</span>
-                    </div>
-                    <div class="link-arrow">
-                        <i class="fas fa-external-link-alt"></i>
-                    </div>
-                </a>
-                <a href="https://t.me/sterepando" class="social-link bro-link" target="_blank" rel="noopener noreferrer">
-                    <div class="link-icon">
-                        <i class="fas fa-user-friends"></i>
-                    </div>
-                    <div class="link-info">
-                        <span class="link-title">sterepando</span>
-                        <span class="link-handle">@sterepando</span>
-                    </div>
-                    <div class="link-arrow">
-                        <i class="fas fa-external-link-alt"></i>
-                    </div>
-                </a>
-                <a href="https://t.me/faraonchiklol" class="social-link bro-link" target="_blank" rel="noopener noreferrer">
-                    <div class="link-icon">
-                        <i class="fas fa-user-friends"></i>
-                    </div>
-                    <div class="link-info">
-                        <span class="link-title">okak</span>
-                        <span class="link-handle">@faraonchiklol</span>
-                    </div>
-                    <div class="link-arrow">
-                        <i class="fas fa-external-link-alt"></i>
-                    </div>
-                </a>
-                <a href="https://t.me/Uzuy_tengen" class="social-link bro-link" target="_blank" rel="noopener noreferrer">
-                    <div class="link-icon">
-                        <i class="fas fa-user-friends"></i>
-                    </div>
-                    <div class="link-info">
-                        <span class="link-title">тенген</span>
-                        <span class="link-handle">@Uzuy_tengen</span>
-                    </div>
-                    <div class="link-arrow">
-                        <i class="fas fa-external-link-alt"></i>
-                    </div>
-                </a>
-                <a href="https://t.me/Codeatack" class="social-link bro-link" target="_blank" rel="noopener noreferrer">
-                    <div class="link-icon">
-                        <i class="fas fa-user-friends"></i>
-                    </div>
-                    <div class="link-info">
-                        <span class="link-title">Codeatack</span>
-                        <span class="link-handle">@Codeatack</span>
-                    </div>
-                    <div class="link-arrow">
-                        <i class="fas fa-external-link-alt"></i>
-                    </div>
-                </a>
-            </div>
-        </section>
-        
-        <section class="bio-section">
-            <h2 class="section-title">
-                <i class="fas fa-user"></i>
-                О себе
-            </h2>
-            <div class="bio-content">
-                <div class="bio-card">
-                    <div class="bio-text">
-                        <p>🌟 Привет! Это моя официальная страница!</p>
-                        <p>Здесь ты найдешь все актуальные ссылки обо мне.</p>
-                        <p class="warning-text">
-                            <i class="fas fa-exclamation-triangle"></i>
-                            Остерегайтесь подделок!
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Счетчик просмотров -->
-        <section class="views-section">
-            <div class="views-content">
-                <p><i class="fas fa-eye"></i> Просмотров: <span id="view-count">Загрузка...</span></p>
-            </div>
-        </section>
-    </div>
-    <!-- Копирайт -->
-    <div class="copyright">
-        © <span id="current-year"></span> notso6er. Все права защищены.
-    </div>
-    <!-- Скрипты -->
-    <script src="animations.js?v=5"></script>
-    <script>
-        // Установка текущего года в копирайт
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+// animations.js
 
-        // Функция для увеличения и отображения счетчика просмотров (исправленная)
-        async function updateViewCount() {
-            try {
-                // Используем уникальный ключ для вашего сайта
-                const response = await fetch('https://api.countapi.xyz/hit/notso6er-github-io/visits');
-                if (response.ok) {
-                    const data = await response.json();
-                    document.getElementById('view-count').textContent = data.value;
-                } else {
-                    console.error('Ошибка при получении счетчика:', response.status);
-                    document.getElementById('view-count').textContent = 'Ошибка';
-                }
-            } catch (error) {
-                console.error('Ошибка сети:', error);
-                document.getElementById('view-count').textContent = 'Ошибка';
-            }
+// Функция для создания снежинок
+function createSnowflakes() {
+    const snowflakesContainer = document.getElementById('snowflakes');
+    const snowflakeCount = 50;
+
+    for (let i = 0; i < snowflakeCount; i++) {
+        const snowflake = document.createElement('div');
+        snowflake.classList.add('snowflake');
+        snowflake.innerHTML = '❄';
+        snowflakesContainer.appendChild(snowflake);
+
+        const size = Math.random() * 1 + 0.5;
+        const startPositionX = Math.random() * 100;
+        const delay = Math.random() * 5;
+        const duration = Math.random() * 3 + 5;
+
+        snowflake.style.left = `${startPositionX}vw`;
+        snowflake.style.fontSize = `${size}em`;
+        snowflake.style.opacity = Math.random();
+        snowflake.style.animation = `fall ${duration}s linear ${delay}s infinite`;
+    }
+}
+
+// Добавляем CSS для анимации падения снежинок
+const style = document.createElement('style');
+style.innerHTML = `
+    @keyframes fall {
+        0% {
+            transform: translateY(-10vh) translateX(0) rotate(0deg);
         }
+        100% {
+            transform: translateY(100vh) translateX(20px) rotate(360deg);
+        }
+    }
+`;
+document.head.appendChild(style);
 
-        // Вызываем функцию после загрузки страницы
-        window.addEventListener('load', updateViewCount);
-
-        // Интерактивность для списка друзей
-        document.addEventListener('DOMContentLoaded', function() {
-            const friendsToggle = document.getElementById('friends-toggle');
-            const friendsList = document.getElementById('friends-list');
-            const toggleIcon = document.getElementById('toggle-icon');
-
-            friendsToggle.addEventListener('click', function() {
-                if (friendsList.style.display === 'none' || friendsList.style.display === '') {
-                    friendsList.style.display = 'flex';
-                    toggleIcon.classList.remove('fa-chevron-down');
-                    toggleIcon.classList.add('fa-chevron-up');
-                } else {
-                    friendsList.style.display = 'none';
-                    toggleIcon.classList.remove('fa-chevron-up');
-                    toggleIcon.classList.add('fa-chevron-down');
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+// Инициализация при загрузке страницы
+document.addEventListener('DOMContentLoaded', function() {
+    createSnowflakes();
+});

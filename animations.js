@@ -2,12 +2,12 @@
 
 // Конфигурация анимаций
 const ANIMATION_CONFIG = {
-    snowflakeCount: 30,
-    maxSnowflakeSize: 1.5,
-    minSnowflakeSize: 0.5,
-    fallDuration: { min: 8, max: 15 },
-    windEffect: 50,
-    opacityRange: { min: 0.3, max: 0.8 }
+    snowflakeCount: 40,
+    maxSnowflakeSize: 2.0,
+    minSnowflakeSize: 0.8,
+    fallDuration: { min: 10, max: 20 },
+    windEffect: 80,
+    opacityRange: { min: 0.4, max: 0.9 }
 };
 
 // Класс для управления снежинками
@@ -38,8 +38,8 @@ class SnowflakeManager {
         const snowflake = document.createElement('div');
         snowflake.classList.add('snowflake');
         
-        // Случайные символы снежинок
-        const snowflakeSymbols = ['❄', '❅', '❆', '•', '·'];
+        // Случайные символы снежинок для горной темы
+        const snowflakeSymbols = ['❄', '❅', '❆', '❉', '❊', '❋', '•', '·', '✦', '✧'];
         snowflake.innerHTML = snowflakeSymbols[Math.floor(Math.random() * snowflakeSymbols.length)];
         
         // Случайные параметры
@@ -448,7 +448,7 @@ style.innerHTML = `
             opacity: 1;
         }
         100% {
-            transform: translateY(100vh) translateX(20px) rotate(360deg);
+            transform: translateY(100vh) translateX(30px) rotate(720deg);
             opacity: 0;
         }
     }
@@ -466,6 +466,12 @@ style.innerHTML = `
             opacity: 1;
             transform: translateY(0);
         }
+    }
+    
+    .snowflake {
+        color: #ffffff;
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+        filter: drop-shadow(0 0 2px rgba(135, 206, 235, 0.5));
     }
 `;
 document.head.appendChild(style);

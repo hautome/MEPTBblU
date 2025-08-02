@@ -20,21 +20,26 @@
 }
 
 /* Темы */
-body[data-theme="winter"] {
-    --primary-color: #3498db;
-    --secondary-color: #2980b9;
-    --background-color: rgba(255, 255, 255, 0.85);
+body[data-theme="alpine"] {
+    --primary-color: #87CEEB;
+    --secondary-color: #4682B4;
+    --background-color: rgba(255, 255, 255, 0.9);
     --card-background: rgba(255, 255, 255, 0.95);
     --text-color: #2c3e50;
-    --accent-color: #ecf0f1;
-    --border-color: rgba(0, 0, 0, 0.1);
+    --accent-color: #f0f8ff;
+    --border-color: rgba(135, 206, 235, 0.2);
     --shadow-color: rgba(0, 0, 0, 0.1);
-    --hover-color: rgba(0, 0, 0, 0.03);
+    --hover-color: rgba(135, 206, 235, 0.1);
     --warning-color: #e74c3c;
-    --loading-bar-color: #3498db;
-    --blood-text-color: #3498db;
+    --loading-bar-color: #87CEEB;
+    --blood-text-color: #4682B4;
     --neon-color: #ffffff;
-    --neon-glow: #3498db;
+    --neon-glow: #87CEEB;
+    --glass-bg: rgba(255, 255, 255, 0.3);
+    --glass-border: rgba(135, 206, 235, 0.3);
+    --mountain-gradient: linear-gradient(135deg, #87CEEB, #4682B4, #5F9EA0);
+    --snow-color: #ffffff;
+    --ice-color: #E0F6FF;
 }
 
 * {
@@ -65,14 +70,15 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('https://akspic.ru/image/167918-anime_pejzazh-anime-pejzazhnaya_zhivopis-zhivopis-art/3840x2160');
+    background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3840&q=100');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     z-index: -1;
-    opacity: 0.7;
+    opacity: 0.8;
     will-change: transform;
+    filter: brightness(1.1) contrast(1.1) saturate(1.2);
 }
 
 /* Контейнер для снежинок */
@@ -133,10 +139,10 @@ body {
     height: 120px;
     border-radius: 50%;
     padding: 4px;
-    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), #9b59b6, #e74c3c);
+    background: var(--mountain-gradient);
     background-size: 400% 400%;
     animation: rotate 4s linear infinite, gradientShift 3s ease-in-out infinite;
-    box-shadow: 0 0 30px var(--neon-glow), 0 0 60px rgba(52, 152, 219, 0.3);
+    box-shadow: 0 0 30px var(--neon-glow), 0 0 60px rgba(135, 206, 235, 0.4);
     position: relative;
 }
 
@@ -147,26 +153,26 @@ body {
     left: -2px;
     right: -2px;
     bottom: -2px;
-    background: linear-gradient(45deg, #3498db, #9b59b6, #e74c3c, #f39c12);
+    background: linear-gradient(45deg, #87CEEB, #4682B4, #5F9EA0, #B0E0E6);
     background-size: 400% 400%;
     border-radius: 50%;
     z-index: -1;
     animation: gradientShift 3s ease-in-out infinite;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .avatar-inner {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--card-background), rgba(255, 255, 255, 0.8));
+    background: linear-gradient(135deg, var(--ice-color), rgba(255, 255, 255, 0.9));
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 3rem;
     color: var(--primary-color);
     transition: transform 0.3s ease;
-    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5);
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.7);
 }
 
 .avatar-inner:hover {
@@ -186,13 +192,13 @@ body {
     display: inline-block;
     color: var(--blood-text-color);
     animation: bloodDrop 3s infinite;
-    text-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    text-shadow: 0 0 5px rgba(135, 206, 235, 0.6);
     transition: all 0.3s ease;
 }
 
 .blood-text:hover {
     transform: scale(1.2);
-    text-shadow: 0 0 15px rgba(52, 152, 219, 0.8);
+    text-shadow: 0 0 15px rgba(135, 206, 235, 0.9);
 }
 
 .blood-text:nth-child(2) { animation-delay: 0.2s; }
@@ -217,17 +223,19 @@ body {
     font-size: 1rem;
     color: var(--text-color);
     padding: 8px 16px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 25px;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(135, 206, 235, 0.3);
     transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(135, 206, 235, 0.1);
 }
 
 .detail-item:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.3);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(135, 206, 235, 0.2);
+    border-color: rgba(135, 206, 235, 0.5);
 }
 
 /* Секция ссылок */
@@ -243,7 +251,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    text-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+    text-shadow: 0 0 10px rgba(135, 206, 235, 0.4);
 }
 
 /* Интерактивный заголовок друзей */
@@ -264,7 +272,7 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(52, 152, 219, 0.1), transparent);
+    background: linear-gradient(90deg, transparent, rgba(135, 206, 235, 0.15), transparent);
     transition: left 0.5s ease;
 }
 
@@ -339,10 +347,10 @@ body {
 }
 
 .social-link:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.4);
     transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15), 0 0 20px rgba(52, 152, 219, 0.3);
-    border-color: rgba(52, 152, 219, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15), 0 0 20px rgba(135, 206, 235, 0.4);
+    border-color: rgba(135, 206, 235, 0.5);
 }
 
 .link-icon {
@@ -381,7 +389,7 @@ body {
 
 .social-link:hover .link-icon {
     transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 0 20px rgba(52, 152, 219, 0.6);
+    box-shadow: 0 0 20px rgba(135, 206, 235, 0.7);
 }
 
 .link-info {
@@ -396,7 +404,7 @@ body {
 }
 
 .social-link:hover .link-title {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .link-handle {
@@ -420,7 +428,7 @@ body {
 .social-link:hover .link-arrow {
     opacity: 1;
     transform: translateX(5px);
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 /* Секция "О себе" */
@@ -446,7 +454,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, transparent, rgba(52, 152, 219, 0.05), transparent);
+    background: linear-gradient(45deg, transparent, rgba(135, 206, 235, 0.08), transparent);
     transform: translateX(-100%);
     transition: transform 0.5s ease;
 }
@@ -504,7 +512,7 @@ body {
     left: 0;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    background: var(--mountain-gradient);
     animation: loadingBar 2s ease-in-out infinite;
 }
 
@@ -569,11 +577,11 @@ body {
 @keyframes bloodDrop {
     0%, 100% { 
         transform: translateY(0);
-        text-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+        text-shadow: 0 0 5px rgba(135, 206, 235, 0.6);
     }
     50% { 
         transform: translateY(-10px);
-        text-shadow: 0 0 15px rgba(52, 152, 219, 0.8);
+        text-shadow: 0 0 15px rgba(135, 206, 235, 0.9);
     }
 }
 

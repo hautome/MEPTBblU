@@ -1,4 +1,3 @@
-(cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF'
 diff --git a/animations.js b/animations.js
 --- a/animations.js
 +++ b/animations.js
@@ -528,5 +527,3 @@ diff --git a/animations.js b/animations.js
 +const app = new BioApp();
 +app.init();
 +
-EOF
-)

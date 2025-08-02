@@ -1,538 +1,512 @@
-diff --git a/index.html b/index.html
---- a/index.html
-+++ b/index.html
-@@ -1,248 +1,286 @@
--<!DOCTYPE html>
--<html lang="ru">
--<head>
--    <meta charset="UTF-8">
--    <meta name="viewport" content="width=device-width, initial-scale=1.0">
--    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
--    <meta name="description" content="notso6er - 15 лет. Официальная био-страница.">
--    <meta name="author" content="notso6er">
--    <meta http-equiv="X-Frame-Options" content="DENY">
--    <meta http-equiv="X-Content-Type-Options" content="nosniff">
--    <meta name="referrer" content="no-referrer">
--    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
--    <meta http-equiv="Pragma" content="no-cache">
--    <meta http-equiv="Expires" content="0">
--    <title>notso6er - Bio</title>
--    <!-- Защита от ботов -->
--    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
--    <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
--    <meta name="slurp" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
--    <!-- Preload fonts -->
--    <link rel="preconnect" href="https://fonts.googleapis.com">
--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
--    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fredoka+One&family=Comic+Neue:wght@300;400;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
--    <!-- Font Awesome for icons -->
--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
--    <link rel="stylesheet" href="styles.css?v=7">
--</head>
--<body data-theme="winter">
--    <!-- Фоновое изображение -->
--    <div class="background-image"></div>
--    <!-- Основной контент -->
--    <div class="container" id="main-content">
--        <header class="profile-header">
--            <div class="profile-avatar">
--                <div class="avatar-border">
--                    <div class="avatar-inner">
--                        <i class="fas fa-user-secret"></i>
--                    </div>
--                </div>
--            </div>
--            <div class="profile-info">
--                <h1 class="profile-name">
--                    <span class="blood-text">n</span>
--                    <span class="blood-text">o</span>
--                    <span class="blood-text">t</span>
--                    <span class="blood-text">s</span>
--                    <span class="blood-text">o</span>
--                    <span class="blood-text">6</span>
--                    <span class="blood-text">e</span>
--                    <span class="blood-text">r</span>
--                </h1>
--                <div class="profile-details">
--                    <div class="detail-item">
--                        <i class="fas fa-birthday-cake"></i>
--                        <span>15 лет</span>
--                    </div>
--                    <div class="detail-item">
--                        <i class="fas fa-laptop-code"></i>
--                        <span>Developer</span>
--                    </div>
--                    <div class="detail-item">
--                        <i class="fas fa-code"></i>
--                        <span>Python • JavaScript</span>
--                    </div>
--                </div>
--            </div>
--        </header>
--        
--        <section class="social-links">
--            <h2 class="section-title">
--                <i class="fas fa-link"></i>
--                Мои ссылки
--            </h2>
--            <div class="links-container">
--                <a href="https://t.me/notso6er" class="social-link" target="_blank" rel="noopener noreferrer">
--                    <div class="link-icon">
--                        <i class="fab fa-telegram"></i>
--                    </div>
--                    <div class="link-info">
--                        <span class="link-title">Telegram</span>
--                        <span class="link-handle">@notso6er</span>
--                    </div>
--                    <div class="link-arrow">
--                        <i class="fas fa-external-link-alt"></i>
--                    </div>
--                </a>
--            </div>
--        </section>
--        
--        <!-- Интерактивная секция друзей -->
--        <section class="social-links">
--            <h2 class="section-title friends-toggle" id="friends-toggle">
--                <i class="fas fa-users"></i>
--                Мои друзья
--                <i class="fas fa-chevron-down toggle-icon" id="toggle-icon"></i>
--            </h2>
--            <div class="links-container friends-list" id="friends-list" style="display: none;">
--                <a href="https://t.me/ubuntu32" class="social-link bro-link" target="_blank" rel="noopener noreferrer">
--                    <div class="link-icon">
--                        <i class="fas fa-user-friends"></i>
--                    </div>
--                    <div class="link-info">
--                        <span class="link-title">Aeza</span>
--                        <span class="link-handle">@ubuntu32</span>
--                    </div>
--                    <div class="link-arrow">
--                        <i class="fas fa-external-link-alt"></i>
--                    </div>
--                </a>
--                <a href="https://t.me/6011428748" class="social-link bro-link" target="_blank" rel="noopener noreferrer">
--                    <div class="link-icon">
--                        <i class="fas fa-user-friends"></i>
--                    </div>
--                    <div class="link-info">
--                        <span class="link-title">nyashka</span>
--                        <span class="link-handle">@6011428748</span>
--                    </div>
--                    <div class="link-arrow">
--                        <i class="fas fa-external-link-alt"></i>
--                    </div>
--                </a>
--                <a href="https://t.me/sterepando" class="social-link bro-link" target="_blank" rel="noopener noreferrer">
--                    <div class="link-icon">
--                        <i class="fas fa-user-friends"></i>
--                    </div>
--                    <div class="link-info">
--                        <span class="link-title">sterepando</span>
--                        <span class="link-handle">@sterepando</span>
--                    </div>
--                    <div class="link-arrow">
--                        <i class="fas fa-external-link-alt"></i>
--                    </div>
--                </a>
--                <a href="https://t.me/faraonchiklol" class="social-link bro-link" target="_blank" rel="noopener noreferrer">
--                    <div class="link-icon">
--                        <i class="fas fa-user-friends"></i>
--                    </div>
--                    <div class="link-info">
--                        <span class="link-title">okak</span>
--                        <span class="link-handle">@faraonchiklol</span>
--                    </div>
--                    <div class="link-arrow">
--                        <i class="fas fa-external-link-alt"></i>
--                    </div>
--                </a>
--                <a href="https://t.me/Uzuy_tengen" class="social-link bro-link" target="_blank" rel="noopener noreferrer">
--                    <div class="link-icon">
--                        <i class="fas fa-user-friends"></i>
--                    </div>
--                    <div class="link-info">
--                        <span class="link-title">тенген</span>
--                        <span class="link-handle">@Uzuy_tengen</span>
--                    </div>
--                    <div class="link-arrow">
--                        <i class="fas fa-external-link-alt"></i>
--                    </div>
--                </a>
--                <a href="https://t.me/Codeatack" class="social-link bro-link" target="_blank" rel="noopener noreferrer">
--                    <div class="link-icon">
--                        <i class="fas fa-user-friends"></i>
--                    </div>
--                    <div class="link-info">
--                        <span class="link-title">Codeatack</span>
--                        <span class="link-handle">@Codeatack</span>
--                    </div>
--                    <div class="link-arrow">
--                        <i class="fas fa-external-link-alt"></i>
--                    </div>
--                </a>
--            </div>
--        </section>
--        
--        <section class="bio-section">
--            <h2 class="section-title">
--                <i class="fas fa-user"></i>
--                О себе
--            </h2>
--            <div class="bio-content">
--                <div class="bio-card">
--                    <div class="bio-text">
--                        <p>🌟 Привет! Это моя официальная страница!</p>
--                        <p>Здесь ты найдешь все актуальные ссылки обо мне.</p>
--                        <p class="warning-text">
--                            <i class="fas fa-exclamation-triangle"></i>
--                            Остерегайтесь подделок!
--                        </p>
--                    </div>
--                </div>
--            </div>
--        </section>
--        <!-- Счетчик просмотров -->
--        <section class="views-section">
--            <div class="views-content">
--                <p><i class="fas fa-eye"></i> Просмотров: <span id="view-count">Загрузка...</span></p>
--            </div>
--        </section>
--    </div>
--    <!-- Копирайт -->
--    <div class="copyright">
--        © <span id="current-year"></span> notso6er. Все права защищены.
--    </div>
--    <!-- Скрипты -->
--    <script src="animations.js?v=7"></script>
--    <script>
--        // Установка текущего года в копирайт
--        document.getElementById('current-year').textContent = new Date().getFullYear();
--
--        // Функция для увеличения и отображения счетчика просмотров
--        async function updateViewCount() {
--            try {
--                const response = await fetch('https://api.countapi.xyz/hit/notso6er-github-io/visits');
--                if (response.ok) {
--                    const data = await response.json();
--                    document.getElementById('view-count').textContent = data.value;
--                } else {
--                    console.error('Ошибка при получении счетчика:', response.status);
--                    document.getElementById('view-count').textContent = 'Ошибка';
--                }
--            } catch (error) {
--                console.error('Ошибка сети:', error);
--                document.getElementById('view-count').textContent = 'Ошибка';
--            }
--        }
--
--        // Вызываем функцию после загрузки страницы
--        window.addEventListener('load', updateViewCount);
--
--        // Интерактивность для списка друзей
--        document.addEventListener('DOMContentLoaded', function() {
--            const friendsToggle = document.getElementById('friends-toggle');
--            const friendsList = document.getElementById('friends-list');
--            const toggleIcon = document.getElementById('toggle-icon');
--
--            friendsToggle.addEventListener('click', function() {
--                if (friendsList.style.display === 'none' || friendsList.style.display === '') {
--                    friendsList.style.display = 'flex';
--                    toggleIcon.classList.remove('fa-chevron-down');
--                    toggleIcon.classList.add('fa-chevron-up');
--                } else {
--                    friendsList.style.display = 'none';
--                    toggleIcon.classList.remove('fa-chevron-up');
--                    toggleIcon.classList.add('fa-chevron-down');
--                }
--            });
--        });
--    </script>
--</body>
--</html>
-+<!DOCTYPE html>
-+<html lang="ru">
-+<head>
-+    <meta charset="UTF-8">
-+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
-+    <meta name="description" content="notso6er - 15 лет. Официальная био-страница разработчика в альпийском стиле. Python • JavaScript • Telegram">
-+    <meta name="author" content="notso6er">
-+    <meta name="keywords" content="notso6er, developer, python, javascript, telegram, bio, alpine, mountains">
-+    <meta http-equiv="X-Frame-Options" content="DENY">
-+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-+    <meta name="referrer" content="no-referrer">
-+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-+    <meta http-equiv="Pragma" content="no-cache">
-+    <meta http-equiv="Expires" content="0">
-+    <!-- Open Graph / Facebook -->
-+    <meta property="og:type" content="website">
-+    <meta property="og:url" content="https://notso6er.github.io/">
-+    <meta property="og:title" content="notso6er - Alpine Bio">
-+    <meta property="og:description" content="notso6er - 15 лет. Официальная био-страница разработчика в альпийском стиле">
-+    <meta property="og:image" content="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3840&q=100">
-+    <!-- Twitter -->
-+    <meta property="twitter:card" content="summary_large_image">
-+    <meta property="twitter:url" content="https://notso6er.github.io/">
-+    <meta property="twitter:title" content="notso6er - Alpine Bio">
-+    <meta property="twitter:description" content="notso6er - 15 лет. Официальная био-страница разработчика в альпийском стиле">
-+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3840&q=100">
-+    <title>notso6er - Alpine Bio</title>
-+    <!-- Защита от ботов -->
-+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
-+    <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
-+    <meta name="slurp" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
-+    <!-- Preload fonts -->
-+    <link rel="preconnect" href="https://fonts.googleapis.com">
-+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fredoka+One&family=Comic+Neue:wght@300;400;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
-+    <!-- Font Awesome for icons -->
-+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-+    <link rel="stylesheet" href="styles.css?v=8">
-+    <!-- Favicon -->
-+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
-+</head>
-+<body data-theme="alpine">
-+    <!-- Фоновое изображение -->
-+    <div class="background-image" aria-hidden="true"></div>
-+    
-+    <!-- Контейнер для снежинок -->
-+    <div id="snowflakes" class="snowflakes-container" aria-hidden="true"></div>
-+    
-+    <!-- Основной контент -->
-+    <main class="container" id="main-content">
-+        <header class="profile-header">
-+            <div class="profile-avatar">
-+                <div class="avatar-border">
-+                    <div class="avatar-inner" role="img" aria-label="Аватар пользователя">
-+                        <i class="fas fa-user-secret" aria-hidden="true"></i>
-+                    </div>
-+                </div>
-+            </div>
-+            <div class="profile-info">
-+                <h1 class="profile-name">
-+                    <span class="blood-text" aria-hidden="true">n</span>
-+                    <span class="blood-text" aria-hidden="true">o</span>
-+                    <span class="blood-text" aria-hidden="true">t</span>
-+                    <span class="blood-text" aria-hidden="true">s</span>
-+                    <span class="blood-text" aria-hidden="true">o</span>
-+                    <span class="blood-text" aria-hidden="true">6</span>
-+                    <span class="blood-text" aria-hidden="true">e</span>
-+                    <span class="blood-text" aria-hidden="true">r</span>
-+                </h1>
-+                <div class="profile-details">
-+                    <div class="detail-item">
-+                        <i class="fas fa-birthday-cake" aria-hidden="true"></i>
-+                        <span>15 лет</span>
-+                    </div>
-+                    <div class="detail-item">
-+                        <i class="fas fa-laptop-code" aria-hidden="true"></i>
-+                        <span>Developer</span>
-+                    </div>
-+                    <div class="detail-item">
-+                        <i class="fas fa-code" aria-hidden="true"></i>
-+                        <span>Python • JavaScript</span>
-+                    </div>
-+                </div>
-+            </div>
-+        </header>
-+        
-+        <section class="social-links">
-+            <h2 class="section-title">
-+                <i class="fas fa-link" aria-hidden="true"></i>
-+                Мои ссылки
-+            </h2>
-+            <div class="links-container">
-+                <a href="https://t.me/notso6er" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Telegram профиль notso6er">
-+                    <div class="link-icon">
-+                        <i class="fab fa-telegram" aria-hidden="true"></i>
-+                    </div>
-+                    <div class="link-info">
-+                        <span class="link-title">Telegram</span>
-+                        <span class="link-handle">@notso6er</span>
-+                    </div>
-+                    <div class="link-arrow">
-+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-+                    </div>
-+                </a>
-+            </div>
-+        </section>
-+        
-+        <!-- Интерактивная секция друзей -->
-+        <section class="social-links">
-+            <h2 class="section-title friends-toggle" id="friends-toggle" tabindex="0" role="button" aria-expanded="false" aria-controls="friends-list">
-+                <i class="fas fa-users" aria-hidden="true"></i>
-+                Мои друзья
-+                <i class="fas fa-chevron-down toggle-icon" id="toggle-icon" aria-hidden="true"></i>
-+            </h2>
-+            <div class="links-container friends-list" id="friends-list" style="display: none;">
-+                <a href="https://t.me/ubuntu32" class="social-link bro-link" target="_blank" rel="noopener noreferrer" aria-label="Telegram профиль Aeza">
-+                    <div class="link-icon">
-+                        <i class="fas fa-user-friends" aria-hidden="true"></i>
-+                    </div>
-+                    <div class="link-info">
-+                        <span class="link-title">Aeza</span>
-+                        <span class="link-handle">@ubuntu32</span>
-+                    </div>
-+                    <div class="link-arrow">
-+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-+                    </div>
-+                </a>
-+                <a href="https://t.me/6011428748" class="social-link bro-link" target="_blank" rel="noopener noreferrer" aria-label="Telegram профиль nyashka">
-+                    <div class="link-icon">
-+                        <i class="fas fa-user-friends" aria-hidden="true"></i>
-+                    </div>
-+                    <div class="link-info">
-+                        <span class="link-title">nyashka</span>
-+                        <span class="link-handle">@6011428748</span>
-+                    </div>
-+                    <div class="link-arrow">
-+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-+                    </div>
-+                </a>
-+                <a href="https://t.me/sterepando" class="social-link bro-link" target="_blank" rel="noopener noreferrer" aria-label="Telegram профиль sterepando">
-+                    <div class="link-icon">
-+                        <i class="fas fa-user-friends" aria-hidden="true"></i>
-+                    </div>
-+                    <div class="link-info">
-+                        <span class="link-title">sterepando</span>
-+                        <span class="link-handle">@sterepando</span>
-+                    </div>
-+                    <div class="link-arrow">
-+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-+                    </div>
-+                </a>
-+                <a href="https://t.me/faraonchiklol" class="social-link bro-link" target="_blank" rel="noopener noreferrer" aria-label="Telegram профиль okak">
-+                    <div class="link-icon">
-+                        <i class="fas fa-user-friends" aria-hidden="true"></i>
-+                    </div>
-+                    <div class="link-info">
-+                        <span class="link-title">okak</span>
-+                        <span class="link-handle">@faraonchiklol</span>
-+                    </div>
-+                    <div class="link-arrow">
-+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-+                    </div>
-+                </a>
-+                <a href="https://t.me/Uzuy_tengen" class="social-link bro-link" target="_blank" rel="noopener noreferrer" aria-label="Telegram профиль тенген">
-+                    <div class="link-icon">
-+                        <i class="fas fa-user-friends" aria-hidden="true"></i>
-+                    </div>
-+                    <div class="link-info">
-+                        <span class="link-title">тенген</span>
-+                        <span class="link-handle">@Uzuy_tengen</span>
-+                    </div>
-+                    <div class="link-arrow">
-+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-+                    </div>
-+                </a>
-+                <a href="https://t.me/Codeatack" class="social-link bro-link" target="_blank" rel="noopener noreferrer" aria-label="Telegram профиль Codeatack">
-+                    <div class="link-icon">
-+                        <i class="fas fa-user-friends" aria-hidden="true"></i>
-+                    </div>
-+                    <div class="link-info">
-+                        <span class="link-title">Codeatack</span>
-+                        <span class="link-handle">@Codeatack</span>
-+                    </div>
-+                    <div class="link-arrow">
-+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-+                    </div>
-+                </a>
-+            </div>
-+        </section>
-+        
-+        <section class="bio-section">
-+            <h2 class="section-title">
-+                <i class="fas fa-user" aria-hidden="true"></i>
-+                О себе
-+            </h2>
-+            <div class="bio-content">
-+                <div class="bio-card">
-+                    <div class="bio-text">
-+                        <p>🌟 Привет! Это моя официальная страница!</p>
-+                        <p>Здесь ты найдешь все актуальные ссылки обо мне.</p>
-+                        <p class="warning-text">
-+                            <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
-+                            Остерегайтесь подделок!
-+                        </p>
-+                    </div>
-+                </div>
-+            </div>
-+        </section>
-+        
-+        <!-- Счетчик просмотров -->
-+        <section class="views-section">
-+            <div class="views-content">
-+                <p><i class="fas fa-eye" aria-hidden="true"></i> Просмотров: <span id="view-count">Загрузка...</span></p>
-+            </div>
-+        </section>
-+    </main>
-+    
-+    <!-- Копирайт -->
-+    <footer class="copyright">
-+        © <span id="current-year"></span> notso6er. Все права защищены.
-+    </footer>
-+    
-+    <!-- Скрипты -->
-+    <script src="animations.js?v=8"></script>
-+    <script>
-+        // Установка текущего года в копирайт
-+        document.getElementById('current-year').textContent = new Date().getFullYear();
-+
-+        // Функция для увеличения и отображения счетчика просмотров
-+        async function updateViewCount() {
-+            try {
-+                const response = await fetch('https://api.countapi.xyz/hit/notso6er-github-io/visits');
-+                if (response.ok) {
-+                    const data = await response.json();
-+                    document.getElementById('view-count').textContent = data.value.toLocaleString('ru-RU');
-+                } else {
-+                    console.error('Ошибка при получении счетчика:', response.status);
-+                    document.getElementById('view-count').textContent = 'Ошибка';
-+                }
-+            } catch (error) {
-+                console.error('Ошибка сети:', error);
-+                document.getElementById('view-count').textContent = 'Ошибка';
-+            }
-+        }
-+
-+        // Вызываем функцию после загрузки страницы
-+        window.addEventListener('load', updateViewCount);
-+
-+        // Интерактивность для списка друзей
-+        document.addEventListener('DOMContentLoaded', function() {
-+            const friendsToggle = document.getElementById('friends-toggle');
-+            const friendsList = document.getElementById('friends-list');
-+            const toggleIcon = document.getElementById('toggle-icon');
-+
-+            function toggleFriends() {
-+                const isExpanded = friendsList.style.display === 'flex';
-+                
-+                if (!isExpanded) {
-+                    friendsList.style.display = 'flex';
-+                    toggleIcon.classList.remove('fa-chevron-down');
-+                    toggleIcon.classList.add('fa-chevron-up');
-+                    friendsToggle.setAttribute('aria-expanded', 'true');
-+                } else {
-+                    friendsList.style.display = 'none';
-+                    toggleIcon.classList.remove('fa-chevron-up');
-+                    toggleIcon.classList.add('fa-chevron-down');
-+                    friendsToggle.setAttribute('aria-expanded', 'false');
-+                }
-+            }
-+
-+            // Обработчик клика
-+            friendsToggle.addEventListener('click', toggleFriends);
-+            
-+            // Обработчик клавиатуры для доступности
-+            friendsToggle.addEventListener('keydown', function(e) {
-+                if (e.key === 'Enter' || e.key === ' ') {
-+                    e.preventDefault();
-+                    toggleFriends();
-+                }
-+            });
-+        });
-+    </script>
-+</body>
-+</html>
-+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="description" content="notso6er - 15 лет. Официальная био-страница разработчика в альпийском стиле. Python • JavaScript • Telegram">
+    <meta name="author" content="notso6er">
+    <meta name="keywords" content="notso6er, developer, python, javascript, telegram, bio, alpine, mountains">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="no-referrer">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://notso6er.github.io/">
+    <meta property="og:title" content="notso6er - Alpine Bio">
+    <meta property="og:description" content="notso6er - 15 лет. Официальная био-страница разработчика в альпийском стиле">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3840&q=100">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://notso6er.github.io/">
+    <meta property="twitter:title" content="notso6er - Alpine Bio">
+    <meta property="twitter:description" content="notso6er - 15 лет. Официальная био-страница разработчика в альпийском стиле">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3840&q=100">
+    
+    <title>notso6er - Alpine Bio</title>
+    
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://api.countapi.xyz; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https://api.countapi.xyz;">
+    
+    <!-- Защита от ботов -->
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="slurp" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    
+    <!-- Preload fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fredoka+One&family=Comic+Neue:wght@300;400;700&family=Orbitron:wght@400;700;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏔️</text></svg>">
+    <link rel="manifest" href="data:application/json,{&quot;name&quot;:&quot;notso6er Bio&quot;,&quot;short_name&quot;:&quot;notso6er&quot;,&quot;display&quot;:&quot;standalone&quot;,&quot;theme_color&quot;:&quot;#3498db&quot;,&quot;background_color&quot;:&quot;#ffffff&quot;}">
+    
+    <link rel="stylesheet" href="styles.css?v=2024">
+</head>
+<body data-theme="alpine" data-particles="true" data-sound="false">
+    <!-- Theme Toggle -->
+    <div class="theme-toggle" aria-label="Переключатель темы">
+        <button id="theme-btn" aria-label="Переключить тему" title="Переключить тему">
+            <i class="fas fa-sun" aria-hidden="true"></i>
+        </button>
+    </div>
+
+    <!-- Settings Panel -->
+    <div class="settings-panel" id="settings-panel">
+        <button class="settings-toggle" id="settings-toggle" aria-label="Настройки" title="Настройки">
+            <i class="fas fa-cog" aria-hidden="true"></i>
+        </button>
+        <div class="settings-content" id="settings-content">
+            <h3>Настройки</h3>
+            <div class="setting-item">
+                <label for="particles-toggle">Эффекты частиц</label>
+                <input type="checkbox" id="particles-toggle" checked>
+            </div>
+            <div class="setting-item">
+                <label for="sound-toggle">Звуковые эффекты</label>
+                <input type="checkbox" id="sound-toggle">
+            </div>
+            <div class="setting-item">
+                <label for="animation-speed">Скорость анимации</label>
+                <input type="range" id="animation-speed" min="0.5" max="2" step="0.1" value="1">
+            </div>
+            <div class="setting-item">
+                <label for="lang-select">Язык</label>
+                <select id="lang-select">
+                    <option value="ru">Русский</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loading-animation">
+            <div class="mountain-loader">
+                <div class="mountain"></div>
+                <div class="mountain"></div>
+                <div class="mountain"></div>
+            </div>
+            <p class="loading-text" data-en="Loading..." data-ru="Загрузка...">Загрузка...</p>
+        </div>
+    </div>
+
+    <!-- Background Effects -->
+    <div class="background-effects">
+        <div class="background-image" aria-hidden="true"></div>
+        <div class="background-overlay" aria-hidden="true"></div>
+        <canvas id="particles-canvas" aria-hidden="true"></canvas>
+        <div id="snowflakes" class="snowflakes-container" aria-hidden="true"></div>
+    </div>
+    
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-to-content">Перейти к основному содержанию</a>
+    
+    <!-- Main Content -->
+    <main class="container" id="main-content">
+        <!-- Performance metrics -->
+        <div class="performance-monitor" id="performance-monitor" style="display: none;">
+            <div class="metric">FPS: <span id="fps-counter">60</span></div>
+            <div class="metric">Load: <span id="load-time">0ms</span></div>
+        </div>
+
+        <header class="profile-header">
+            <div class="profile-avatar">
+                <div class="avatar-border">
+                    <div class="avatar-inner" role="img" aria-label="Аватар пользователя">
+                        <i class="fas fa-user-secret" aria-hidden="true"></i>
+                        <div class="avatar-status" title="Онлайн"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-info">
+                <h1 class="profile-name">
+                    <span class="blood-text" aria-hidden="true">n</span>
+                    <span class="blood-text" aria-hidden="true">o</span>
+                    <span class="blood-text" aria-hidden="true">t</span>
+                    <span class="blood-text" aria-hidden="true">s</span>
+                    <span class="blood-text" aria-hidden="true">o</span>
+                    <span class="blood-text" aria-hidden="true">6</span>
+                    <span class="blood-text" aria-hidden="true">e</span>
+                    <span class="blood-text" aria-hidden="true">r</span>
+                </h1>
+                <div class="profile-subtitle" data-en="Full-Stack Developer & Mountain Enthusiast" data-ru="Full-Stack Разработчик и Любитель Гор">
+                    Full-Stack Разработчик и Любитель Гор
+                </div>
+                <div class="profile-details">
+                    <div class="detail-item">
+                        <i class="fas fa-birthday-cake" aria-hidden="true"></i>
+                        <span data-en="15 years old" data-ru="15 лет">15 лет</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-laptop-code" aria-hidden="true"></i>
+                        <span>Developer</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-code" aria-hidden="true"></i>
+                        <span>Python • JavaScript • TypeScript</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                        <span data-en="Remote / Mountains" data-ru="Удаленно / Горы">Удаленно / Горы</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Skills Section -->
+        <section class="skills-section">
+            <h2 class="section-title">
+                <i class="fas fa-tools" aria-hidden="true"></i>
+                <span data-en="Skills & Technologies" data-ru="Навыки и Технологии">Навыки и Технологии</span>
+            </h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3 data-en="Programming Languages" data-ru="Языки программирования">Языки программирования</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag expert">Python</span>
+                        <span class="skill-tag advanced">JavaScript</span>
+                        <span class="skill-tag intermediate">TypeScript</span>
+                        <span class="skill-tag beginner">Rust</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 data-en="Frameworks & Libraries" data-ru="Фреймворки и Библиотеки">Фреймворки и Библиотеки</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag advanced">React</span>
+                        <span class="skill-tag intermediate">Node.js</span>
+                        <span class="skill-tag intermediate">Django</span>
+                        <span class="skill-tag beginner">FastAPI</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 data-en="Tools & Platforms" data-ru="Инструменты и Платформы">Инструменты и Платформы</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag expert">Git</span>
+                        <span class="skill-tag advanced">Docker</span>
+                        <span class="skill-tag intermediate">AWS</span>
+                        <span class="skill-tag intermediate">Linux</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects Section -->
+        <section class="projects-section">
+            <h2 class="section-title">
+                <i class="fas fa-project-diagram" aria-hidden="true"></i>
+                <span data-en="Featured Projects" data-ru="Избранные Проекты">Избранные Проекты</span>
+            </h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-user-circle" aria-hidden="true"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3 data-en="Bio Page" data-ru="Био-страница">Био-страница</h3>
+                        <p data-en="Modern responsive bio page with alpine theme" data-ru="Современная адаптивная био-страница в альпийской тематике">Современная адаптивная био-страница в альпийской тематике</p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="social-links">
+            <h2 class="section-title">
+                <i class="fas fa-link" aria-hidden="true"></i>
+                <span data-en="Social Links" data-ru="Мои ссылки">Мои ссылки</span>
+            </h2>
+            <div class="links-container">
+                <a href="https://t.me/notso6er" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Telegram профиль notso6er">
+                    <div class="link-icon">
+                        <i class="fab fa-telegram" aria-hidden="true"></i>
+                    </div>
+                    <div class="link-info">
+                        <span class="link-title">Telegram</span>
+                        <span class="link-handle">@notso6er</span>
+                    </div>
+                    <div class="link-arrow">
+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                    </div>
+                </a>
+                <a href="#" class="social-link coming-soon" aria-label="GitHub (скоро)">
+                    <div class="link-icon">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                    </div>
+                    <div class="link-info">
+                        <span class="link-title">GitHub</span>
+                        <span class="link-handle" data-en="Coming Soon" data-ru="Скоро">Скоро</span>
+                    </div>
+                    <div class="link-arrow">
+                        <i class="fas fa-clock" aria-hidden="true"></i>
+                    </div>
+                </a>
+            </div>
+        </section>
+        
+        <!-- Interactive Friends Section -->
+        <section class="social-links">
+            <h2 class="section-title friends-toggle" id="friends-toggle" tabindex="0" role="button" aria-expanded="false" aria-controls="friends-list">
+                <i class="fas fa-users" aria-hidden="true"></i>
+                <span data-en="My Friends" data-ru="Мои друзья">Мои друзья</span>
+                <i class="fas fa-chevron-down toggle-icon" id="toggle-icon" aria-hidden="true"></i>
+            </h2>
+            <div class="links-container friends-list" id="friends-list" style="display: none;">
+                <a href="https://t.me/ubuntu32" class="social-link bro-link" target="_blank" rel="noopener noreferrer" aria-label="Telegram профиль Aeza">
+                    <div class="link-icon">
+                        <i class="fas fa-user-friends" aria-hidden="true"></i>
+                    </div>
+                    <div class="link-info">
+                        <span class="link-title">Aeza</span>
+                        <span class="link-handle">@ubuntu32</span>
+                    </div>
+                    <div class="link-arrow">
+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                    </div>
+                </a>
+                <a href="https://t.me/6011428748" class="social-link bro-link" target="_blank" rel="noopener noreferrer" aria-label="Telegram профиль nyashka">
+                    <div class="link-icon">
+                        <i class="fas fa-user-friends" aria-hidden="true"></i>
+                    </div>
+                    <div class="link-info">
+                        <span class="link-title">nyashka</span>
+                        <span class="link-handle">@6011428748</span>
+                    </div>
+                    <div class="link-arrow">
+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                    </div>
+                </a>
+                <a href="https://t.me/sterepando" class="social-link bro-link" target="_blank" rel="noopener noreferrer" aria-label="Telegram профиль sterepando">
+                    <div class="link-icon">
+                        <i class="fas fa-user-friends" aria-hidden="true"></i>
+                    </div>
+                    <div class="link-info">
+                        <span class="link-title">sterepando</span>
+                        <span class="link-handle">@sterepando</span>
+                    </div>
+                    <div class="link-arrow">
+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                    </div>
+                </a>
+                <a href="https://t.me/faraonchiklol" class="social-link bro-link" target="_blank" rel="noopener noreferrer" aria-label="Telegram профиль okak">
+                    <div class="link-icon">
+                        <i class="fas fa-user-friends" aria-hidden="true"></i>
+                    </div>
+                    <div class="link-info">
+                        <span class="link-title">okak</span>
+                        <span class="link-handle">@faraonchiklol</span>
+                    </div>
+                    <div class="link-arrow">
+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                    </div>
+                </a>
+                <a href="https://t.me/Uzuy_tengen" class="social-link bro-link" target="_blank" rel="noopener noreferrer" aria-label="Telegram профиль тенген">
+                    <div class="link-icon">
+                        <i class="fas fa-user-friends" aria-hidden="true"></i>
+                    </div>
+                    <div class="link-info">
+                        <span class="link-title">тенген</span>
+                        <span class="link-handle">@Uzuy_tengen</span>
+                    </div>
+                    <div class="link-arrow">
+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                    </div>
+                </a>
+                <a href="https://t.me/Codeatack" class="social-link bro-link" target="_blank" rel="noopener noreferrer" aria-label="Telegram профиль Codeatack">
+                    <div class="link-icon">
+                        <i class="fas fa-user-friends" aria-hidden="true"></i>
+                    </div>
+                    <div class="link-info">
+                        <span class="link-title">Codeatack</span>
+                        <span class="link-handle">@Codeatack</span>
+                    </div>
+                    <div class="link-arrow">
+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                    </div>
+                </a>
+            </div>
+        </section>
+        
+        <section class="bio-section">
+            <h2 class="section-title">
+                <i class="fas fa-user" aria-hidden="true"></i>
+                <span data-en="About Me" data-ru="О себе">О себе</span>
+            </h2>
+            <div class="bio-content">
+                <div class="bio-card">
+                    <div class="bio-text">
+                        <p data-en="🌟 Welcome to my official page!" data-ru="🌟 Привет! Это моя официальная страница!">🌟 Привет! Это моя официальная страница!</p>
+                        <p data-en="Here you'll find all my current links and information." data-ru="Здесь ты найдешь все актуальные ссылки обо мне.">Здесь ты найдешь все актуальные ссылки обо мне.</p>
+                        <p data-en="I'm passionate about coding, mountains, and creating beautiful digital experiences." data-ru="Я увлекаюсь программированием, горами и созданием красивых цифровых решений.">Я увлекаюсь программированием, горами и созданием красивых цифровых решений.</p>
+                        <p class="warning-text">
+                            <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                            <span data-en="Beware of fakes!" data-ru="Остерегайтесь подделок!">Остерегайтесь подделок!</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Form -->
+        <section class="contact-section">
+            <h2 class="section-title">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+                <span data-en="Contact Me" data-ru="Связаться со мной">Связаться со мной</span>
+            </h2>
+            <div class="contact-content">
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="contact-name" data-en="Name" data-ru="Имя">Имя</label>
+                        <input type="text" id="contact-name" name="name" required aria-describedby="name-help">
+                        <small id="name-help" data-en="Your name or nickname" data-ru="Ваше имя или никнейм">Ваше имя или никнейм</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email" data-en="Email (optional)" data-ru="Email (необязательно)">Email (необязательно)</label>
+                        <input type="email" id="contact-email" name="email" aria-describedby="email-help">
+                        <small id="email-help" data-en="For response if needed" data-ru="Для ответа, если нужно">Для ответа, если нужно</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message" data-en="Message" data-ru="Сообщение">Сообщение</label>
+                        <textarea id="contact-message" name="message" required aria-describedby="message-help"></textarea>
+                        <small id="message-help" data-en="Your message, question or suggestion" data-ru="Ваше сообщение, вопрос или предложение">Ваше сообщение, вопрос или предложение</small>
+                    </div>
+                    <button type="submit" class="contact-submit">
+                        <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                        <span data-en="Send Message" data-ru="Отправить сообщение">Отправить сообщение</span>
+                    </button>
+                </form>
+                <div class="contact-alternative">
+                    <p data-en="Or reach out directly:" data-ru="Или свяжитесь напрямую:">Или свяжитесь напрямую:</p>
+                    <a href="https://t.me/notso6er" class="direct-contact" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-telegram" aria-hidden="true"></i>
+                        Telegram
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Analytics Section -->
+        <section class="analytics-section">
+            <h2 class="section-title">
+                <i class="fas fa-chart-line" aria-hidden="true"></i>
+                <span data-en="Statistics" data-ru="Статистика">Статистика</span>
+            </h2>
+            <div class="analytics-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-eye" aria-hidden="true"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number" id="view-count">Загрузка...</div>
+                        <div class="stat-label" data-en="Page Views" data-ru="Просмотров">Просмотров</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock" aria-hidden="true"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number" id="time-spent">0s</div>
+                        <div class="stat-label" data-en="Time on Page" data-ru="Время на странице">Время на странице</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-mouse-pointer" aria-hidden="true"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number" id="click-count">0</div>
+                        <div class="stat-label" data-en="Interactions" data-ru="Взаимодействий">Взаимодействий</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-globe" aria-hidden="true"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number" id="online-status">●</div>
+                        <div class="stat-label" data-en="Status" data-ru="Статус">Статус</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="copyright">
+        <div class="footer-content">
+            <div class="footer-main">
+                © <span id="current-year"></span> notso6er. 
+                <span data-en="All rights reserved." data-ru="Все права защищены.">Все права защищены.</span>
+            </div>
+            <div class="footer-links">
+                <a href="#" class="footer-link" data-en="Privacy" data-ru="Конфиденциальность">Конфиденциальность</a>
+                <a href="#" class="footer-link" data-en="Terms" data-ru="Условия">Условия</a>
+                <a href="#main-content" class="footer-link" data-en="Back to Top" data-ru="Наверх">Наверх</a>
+            </div>
+            <div class="footer-tech">
+                <span data-en="Built with ❤️ and modern web technologies" data-ru="Создано с ❤️ и современными веб-технологиями">Создано с ❤️ и современными веб-технологиями</span>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Easter Egg -->
+    <div class="easter-egg" id="easter-egg" style="display: none;">
+        <div class="easter-content">
+            <h3 data-en="🏔️ You found the mountain secret!" data-ru="🏔️ Вы нашли горную тайну!">🏔️ Вы нашли горную тайну!</h3>
+            <p data-en="Welcome to the peak of creativity!" data-ru="Добро пожаловать на вершину творчества!">Добро пожаловать на вершину творчества!</p>
+            <button class="easter-close" onclick="document.getElementById('easter-egg').style.display='none'">×</button>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="animations.js?v=2024"></script>
+    <script>
+        // Инициализация современных функций
+        document.addEventListener('DOMContentLoaded', function() {
+            // Установка текущего года
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            
+            // Скрытие экрана загрузки
+            setTimeout(() => {
+                const loadingScreen = document.getElementById('loading-screen');
+                if (loadingScreen) {
+                    loadingScreen.style.opacity = '0';
+                    setTimeout(() => {
+                        loadingScreen.style.display = 'none';
+                    }, 500);
+                }
+            }, 1500);
+            
+            // Запуск конами-кода для пасхалки
+            let konamiCode = [];
+            const konamiSequence = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]; // ↑↑↓↓←→←→BA
+            
+            document.addEventListener('keydown', function(e) {
+                konamiCode.push(e.keyCode);
+                if (konamiCode.length > konamiSequence.length) {
+                    konamiCode.shift();
+                }
+                if (konamiCode.toString() === konamiSequence.toString()) {
+                    document.getElementById('easter-egg').style.display = 'flex';
+                    konamiCode = [];
+                }
+            });
+        });
+    </script>
+</body>
+</html>
